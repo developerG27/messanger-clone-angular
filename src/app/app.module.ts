@@ -8,6 +8,7 @@ import { ConversationComponent } from './conversation/conversation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
 const appRoutes: Routes =  [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
@@ -22,7 +23,8 @@ const appRoutes: Routes =  [
     LoginComponent,
     HomeComponent,
     ConversationComponent,
-    ProfileComponent
+    ProfileComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
