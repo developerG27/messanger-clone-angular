@@ -11,6 +11,10 @@ import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './pipes/search';
 import { FormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
+
+import { AngularFireModule } from 'angularfire2';
+
 const appRoutes: Routes =  [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
@@ -33,6 +37,7 @@ const appRoutes: Routes =  [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
